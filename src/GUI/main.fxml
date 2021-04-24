@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller">
+   <children>
+      <AnchorPane prefHeight="109.0" prefWidth="600.0" style="-fx-background-color: #f6f6f6;">
+         <children>
+            <Button fx:id="btn_menu" layoutX="472.0" layoutY="31.0" mnemonicParsing="false" onAction="#cambiaScena" prefHeight="33.0" prefWidth="94.0" style="-fx-background-color: #D9C6A3; -fx-background-radius: 100; -fx-border-style: none; -fx-border-radius: 100;" text="MENU" textFill="#333333" textOverrun="CLIP" userData="menu.fxml">
+               <font>
+                  <Font name="Lato Regular" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_areaRiservata" layoutX="33.0" layoutY="19.0" mnemonicParsing="false" onAction="#cambiaScena" prefHeight="57.0" prefWidth="161.0" style="-fx-background-radius: 100; -fx-background-color: none; -fx-border-style: none; -fx-border-radius: 100;" text="Area Riservata" textFill="#333333" textOverrun="CLIP" userData="AreaRiservata.fxml">
+               <font>
+                  <Font name="Lato Light" size="13.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="51.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/chef.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="704.0" prefWidth="600.0" style="-fx-background-color: #333;">
+         <children>
+            <AnchorPane prefHeight="643.0" prefWidth="600.0" style="-fx-background-color: #f6f6f6; -fx-background-radius: 0 0 50 50;">
+               <children>
+                  <Text fill="#333333" layoutX="56.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pizzeria" wrappingWidth="292.7294921875">
+                     <font>
+                        <Font name="Lato Black" size="50.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#333333" layoutX="56.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delivery" wrappingWidth="364.7294921875">
+                     <font>
+                        <Font name="Lato Hairline" size="50.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="292.0" fitWidth="293.0" layoutX="154.0" layoutY="165.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/pizza.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="btn_ordina" layoutX="136.0" layoutY="518.0" mnemonicParsing="false" onAction="#cambiaScena" prefHeight="57.0" prefWidth="329.0" style="-fx-background-color: #333; -fx-background-radius: 1000; -fx-border-style: none; -fx-border-radius: 100; -fx-cursor: pointer;" text="PROCEDI  CON L'ORDINE" textFill="#f6f6f6" textOverrun="CLIP" userData="1_ordine.fxml">
+                     <font>
+                        <Font name="Lato Light" size="19.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <Button layoutX="534.0" layoutY="661.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: #D9C6A3; -fx-background-radius: 100; -fx-border-style: none; -fx-border-radius: 100;" text="i" textFill="#333333" textOverrun="CLIP">
+               <font>
+                  <Font name="Lato Regular" size="13.0" />
+               </font>
+            </Button>
+            <Text fill="#f6f6f6" layoutX="25.0" layoutY="681.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Developers:">
+               <font>
+                  <Font name="Lato Regular" size="14.0" />
+               </font>
+            </Text>
+            <Button layoutX="118.0" layoutY="661.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: #f6f6f6; -fx-background-radius: 100; -fx-border-style: none; -fx-border-radius: 100;" text="CP" textFill="#333333" textOverrun="CLIP">
+               <font>
+                  <Font name="Lato Regular" size="10.0" />
+               </font>
+            </Button>
+            <Button layoutX="160.0" layoutY="661.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: #f6f6f6; -fx-background-radius: 100; -fx-border-style: none; -fx-border-radius: 100;" text="GC" textFill="#333333" textOverrun="CLIP">
+               <font>
+                  <Font name="Lato Regular" size="10.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox minHeight="-Infinity" prefHeight="700.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller">
+   <children>
+      <AnchorPane prefHeight="123.0" prefWidth="600.0" style="-fx-background-color: #f6f6f6;">
+         <children>
+            <Button fx:id="back" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#cambiaScena" prefHeight="59.0" prefWidth="58.0" style="-fx-background-radius: 100; -fx-background-color: none; -fx-border-style: none; -fx-border-radius: 100;" textFill="#333333" textOverrun="CLIP" userData="2_ordine.fxml">
+               <font>
+                  <Font name="Lato Light" size="13.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="21.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/back.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane minHeight="-Infinity" prefHeight="700.0" prefWidth="600.0" style="-fx-background-color: #333;">
+         <children>
+            <AnchorPane prefHeight="645.0" prefWidth="602.0" style="-fx-background-color: #f6f6f6; -fx-background-radius: 0 0 50 50;">
+               <children>
+                  <AnchorPane layoutX="56.0" layoutY="114.0" prefWidth="365.0" />
+                  <Button fx:id="step4" layoutX="136.0" layoutY="520.0" mnemonicParsing="false" onAction="#cambiaScena" prefHeight="57.0" prefWidth="329.0" style="-fx-background-color: #FFDE80; -fx-background-radius: 1000; -fx-border-style: none; -fx-border-radius: 100;" text="TERMINA ORDINE" textFill="#333333" textOverrun="CLIP" userData="4_ordine.fxml">
+                     <font>
+                        <Font name="Lato Light" size="19.0" />
+                     </font>
+                  </Button>
+                  <Text fill="#333333" layoutX="52.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ordine" wrappingWidth="235.7294921875">
+                     <font>
+                        <Font name="Lato Black" size="50.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#333333" layoutX="52.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Scegli orario" wrappingWidth="396.7294921875">
+                     <font>
+                        <Font name="Lato Hairline" size="50.0" />
+                     </font>
+                  </Text>
+                  <AnchorPane fx:id="AP_orario" layoutX="39.0" layoutY="194.0" visible="false">
+                     <children>
+                        <Button layoutX="13.0" layoutY="14.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="70.0" style="-fx-background-color: green;" text="19:00" textFill="#f6f6f6">
+                           <font>
+                              <Font name="Lato Regular" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="103.0" layoutY="14.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="70.0" style="-fx-background-color: green;" text="19:10" textFill="#f6f6f6">
+                           <font>
+                              <Font name="Lato Regular" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="192.0" layoutY="14.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="70.0" style="-fx-background-color: green;" text="19:20" textFill="#f6f6f6">
+                           <font>
+                              <Font name="Lato Regular" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="282.0" layoutY="14.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="70.0" style="-fx-background-color: green;" text="19:30" textFill="#f6f6f6">
+                           <font>
+                              <Font name="Lato Regular" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="374.0" layoutY="14.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="70.0" style="-fx-background-color: green;" text="19:40" textFill="#f6f6f6">
+                           <font>
+                              <Font name="Lato Regular" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="464.0" layoutY="14.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="70.0" style="-fx-background-color: green;" text="19:50" textFill="#f6f6f6">
+                           <font>
+                              <Font name="Lato Regular" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="12.0" layoutY="80.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="70.0" style="-fx-background-color: green;" text="20:00" textFill="#f6f6f6">
+                           <font>
+                              <Font name="Lato Regular" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="102.0" layoutY="80.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="70.0" style="-fx-background-color: green;" text="20:10" textFill="#f6f6f6">
+                           <font>
+                              <Font name="Lato Regular" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="191.0" layoutY="80.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="70.0" style="-fx-background-color: green;" text="20:20" textFill="#f6f6f6">
+                           <font>
+                              <Font name="Lato Regular" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="281.0" layoutY="80.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="70.0" style="-fx-background-color: green;" text="20:30" textFill="#f6f6f6">
+                           <font>
+                              <Font name="Lato Regular" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="373.0" layoutY="80.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="70.0" style="-fx-background-color: green;" text="20:40" textFill="#f6f6f6">
+                           <font>
+                              <Font name="Lato Regular" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="463.0" layoutY="80.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="70.0" style="-fx-background-color: green;" text="20:50" textFill="#f6f6f6">
+                           <font>
+                              <Font name="Lato Regular" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="12.0" layoutY="145.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="70.0" style="-fx-background-color: green;" text="21:00" textFill="#f6f6f6">
+                           <font>
+                              <Font name="Lato Regular" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="102.0" layoutY="145.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="70.0" style="-fx-background-color: green;" text="21:10" textFill="#f6f6f6">
+                           <font>
+                              <Font name="Lato Regular" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="191.0" layoutY="145.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="70.0" style="-fx-background-color: green;" text="21:20" textFill="#f6f6f6">
+                           <font>
+                              <Font name="Lato Regular" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="281.0" layoutY="145.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="70.0" style="-fx-background-color: green;" text="21:30" textFill="#f6f6f6">
+                           <font>
+                              <Font name="Lato Regular" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="373.0" layoutY="145.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="70.0" style="-fx-background-color: green;" text="21:40" textFill="#f6f6f6">
+                           <font>
+                              <Font name="Lato Regular" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="463.0" layoutY="145.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="70.0" style="-fx-background-color: green;" text="21:50" textFill="#f6f6f6">
+                           <font>
+                              <Font name="Lato Regular" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="12.0" layoutY="209.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="70.0" style="-fx-background-color: green;" text="22:00" textFill="#f6f6f6">
+                           <font>
+                              <Font name="Lato Regular" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="102.0" layoutY="209.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="70.0" style="-fx-background-color: green;" text="22:10" textFill="#f6f6f6">
+                           <font>
+                              <Font name="Lato Regular" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="191.0" layoutY="209.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="70.0" style="-fx-background-color: green;" text="22:20" textFill="#f6f6f6">
+                           <font>
+                              <Font name="Lato Regular" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="281.0" layoutY="209.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="70.0" style="-fx-background-color: green;" text="22:30" textFill="#f6f6f6">
+                           <font>
+                              <Font name="Lato Regular" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="373.0" layoutY="209.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="70.0" style="-fx-background-color: green;" text="22:40" textFill="#f6f6f6">
+                           <font>
+                              <Font name="Lato Regular" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="463.0" layoutY="209.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="70.0" style="-fx-background-color: green;" text="22:50" textFill="#f6f6f6">
+                           <font>
+                              <Font name="Lato Regular" size="13.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <Button fx:id="btn_orario" layoutX="183.0" layoutY="127.0" mnemonicParsing="false" onAction="#impostaOrario" prefHeight="50.0" prefWidth="236.0" style="-fx-background-color: transparent; -fx-border-style: hidden hidden solid hidden; -fx-border-color: #ccc; -fx-border-width: 2;" text="VEDI ORARI DISPONIBILI" />
+                  <ImageView fitHeight="16.0" fitWidth="8.0" layoutX="393.0" layoutY="145.0">
+                     <image>
+                        <Image url="@../../img/down-arrow.png" />
+                     </image>
+                  </ImageView>
+                  <AnchorPane layoutX="177.0" layoutY="472.0" prefHeight="50.0" prefWidth="217.0">
+                     <children>
+                        <Text fx:id="lbl_orario" layoutX="147.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="101.7294921875">
+                           <font>
+                              <Font name="Lato Regular" size="18.0" />
+                           </font>
+                        </Text>
+                        <Label layoutX="39.0" layoutY="18.0" text="Orario scelto:" />
+                     </children>
+                  </AnchorPane>
+                  <Text fx:id="error" fill="#e82020" layoutX="129.0" layoutY="619.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ATTENZIONE: scegliere un orario di consegna" visible="false" wrappingWidth="344.7294921875">
+                     <font>
+                        <Font name="Lato Light" size="17.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="25.0" layoutY="659.0">
+               <children>
+                  <Button layoutX="509.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: #D9C6A3; -fx-background-radius: 100; -fx-border-style: none; -fx-border-radius: 100;" text="i" textFill="#333333" textOverrun="CLIP">
+                     <font>
+                        <Font name="Lato Regular" size="13.0" />
+                     </font>
+                  </Button>
+                  <Text fill="#f6f6f6" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Developers:">
+                     <font>
+                        <Font name="Lato Regular" size="14.0" />
+                     </font>
+                  </Text>
+                  <Button layoutX="93.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: #f6f6f6; -fx-background-radius: 100; -fx-border-style: none; -fx-border-radius: 100;" text="CP" textFill="#333333" textOverrun="CLIP">
+                     <font>
+                        <Font name="Lato Regular" size="10.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="135.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: #f6f6f6; -fx-background-radius: 100; -fx-border-style: none; -fx-border-radius: 100;" text="GC" textFill="#333333" textOverrun="CLIP">
+                     <font>
+                        <Font name="Lato Regular" size="10.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

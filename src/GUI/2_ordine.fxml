@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller">
+   <children>
+      <Text fx:id="error" fill="#d01919" strokeType="OUTSIDE" strokeWidth="0.0" text="ATTENZIONE: compilare tutti campi" visible="false" wrappingWidth="275.0">
+         <font>
+            <Font name="Lato Light" size="17.0" />
+         </font>
+      </Text>
+      <AnchorPane prefHeight="123.0" prefWidth="600.0" style="-fx-background-color: #f6f6f6;">
+         <children>
+            <AnchorPane layoutX="507.0" layoutY="24.0" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: #FAF566; -fx-background-radius: 100;">
+               <children>
+                  <Text fx:id="totale" layoutX="11.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />
+               </children>
+            </AnchorPane>
+            <Button fx:id="back" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#cambiaScena" prefHeight="59.0" prefWidth="58.0" style="-fx-background-radius: 100; -fx-background-color: none; -fx-border-style: none; -fx-border-radius: 100;" textFill="#333333" textOverrun="CLIP" userData="1_ordine.fxml">
+               <font>
+                  <Font name="Lato Light" size="13.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="21.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/back.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <ImageView fitHeight="42.0" fitWidth="42.0" layoutX="537.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/cart.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="724.0" prefWidth="600.0" style="-fx-background-color: #333;">
+         <children>
+            <AnchorPane prefHeight="641.0" prefWidth="600.0" style="-fx-background-color: #f6f6f6; -fx-background-radius: 0 0 50 50;">
+               <children>
+                  <AnchorPane layoutX="56.0" layoutY="114.0" prefWidth="365.0" />
+                  <Button fx:id="step3" layoutX="136.0" layoutY="520.0" mnemonicParsing="false" onAction="#cambiaScena" prefHeight="60.0" prefWidth="329.0" style="-fx-background-color: #FFDE80; -fx-background-radius: 1000; -fx-border-style: none; -fx-border-radius: 100;" text="PROCEDI  CON L'ORDINE" textFill="#333333" textOverrun="CLIP" userData="3_ordine.fxml">
+                     <font>
+                        <Font name="Lato Light" size="19.0" />
+                     </font>
+                  </Button>
+                  <Text fill="#333333" layoutX="52.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ordine" wrappingWidth="235.7294921875">
+                     <font>
+                        <Font name="Lato Black" size="50.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#333333" layoutX="52.0" layoutY="133.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Scegli pizze" wrappingWidth="396.7294921875">
+                     <font>
+                        <Font name="Lato Hairline" size="50.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="error" fill="#e41212" layoutX="99.0" layoutY="615.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ATTENZIONE: non è stata selezionata nessuna pizza!" visible="false" wrappingWidth="411.7294921875">
+                     <font>
+                        <Font name="Lato Light" size="17.0" />
+                     </font>
+                  </Text>
+                  <ScrollPane fx:id="pizze" layoutX="31.0" layoutY="154.0" prefHeight="332.0" prefWidth="539.0">
+                     <content>
+                        <AnchorPane fx:id="menu_ordina" prefHeight="703.0" prefWidth="541.0">
+                           <children>
+                              <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="260.0" prefWidth="236.0" style="-fx-background-color: #fff;">
+                                 <children>
+                                    <ImageView fitHeight="122.0" fitWidth="119.0" layoutX="59.0" layoutY="14.0">
+                                       <image>
+                                          <Image url="@../../img/pizze/margherita.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text layoutX="1.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Margherita" textAlignment="CENTER" wrappingWidth="235.7294921875">
+                                       <font>
+                                          <Font name="Lato Regular" size="22.0" />
+                                       </font>
+                                    </Text>
+                                    <Text layoutX="1.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text="€ 6.00" textAlignment="CENTER" wrappingWidth="235.7294921875">
+                                       <font>
+                                          <Font name="Lato Regular" size="16.0" />
+                                       </font>
+                                    </Text>
+                                    <Button fx:id="margherita" layoutX="79.0" layoutY="221.0" mnemonicParsing="false" onAction="#addPizza" style="-fx-background-color: #FFDE80;" text="Ordina ora" userData="margherita">
+                                       <font>
+                                          <Font name="Lato Light" size="13.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="r_margherita" layoutX="168.0" layoutY="221.0" mnemonicParsing="false" onAction="#removePizza" prefHeight="15.0" prefWidth="18.0" style="-fx-background-color: #D90B1C;" text="-" textFill="WHITE" userData="margherita">
+                                       <font>
+                                          <Font name="Lato Heavy" size="13.0" />
+                                       </font>
+                                    </Button>
+                                    <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="30.0" prefWidth="20.0" style="-fx-background-color: #9ACFDD; -fx-background-radius: 100;">
+                                       <children>
+                                          <Text fx:id="tot_margherita" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="30.0">
+                                             <font>
+                                                <Font name="Lato Light" size="13.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="271.0" layoutY="14.0" prefHeight="260.0" prefWidth="236.0" style="-fx-background-color: #fff;">
+                                 <children>
+                                    <ImageView fitHeight="122.0" fitWidth="119.0" layoutX="59.0" layoutY="14.0">
+                                       <image>
+                                          <Image url="@../../img/pizze/bufalina.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text layoutX="1.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bufalina" textAlignment="CENTER" wrappingWidth="235.7294921875">
+                                       <font>
+                                          <Font name="Lato Regular" size="22.0" />
+                                       </font>
+                                    </Text>
+                                    <Text layoutX="1.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text="€ 7.00" textAlignment="CENTER" wrappingWidth="235.7294921875">
+                                       <font>
+                                          <Font name="Lato Regular" size="16.0" />
+                                       </font>
+                                    </Text>
+                                    <Button fx:id="bufalina" layoutX="79.0" layoutY="221.0" mnemonicParsing="false" onAction="#addPizza" style="-fx-background-color: #FFDE80;" text="Ordina ora" userData="bufalina">
+                                       <font>
+                                          <Font name="Lato Light" size="13.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="r_bufalina" layoutX="167.0" layoutY="222.0" mnemonicParsing="false" onAction="#removePizza" prefHeight="15.0" prefWidth="18.0" style="-fx-background-color: #D90B1C;" text="-" textFill="WHITE" userData="bufalina">
+                                       <font>
+                                          <Font name="Lato Heavy" size="13.0" />
+                                       </font>
+                                    </Button>
+                                    <AnchorPane layoutX="9.0" layoutY="10.0" prefHeight="30.0" prefWidth="20.0" style="-fx-background-color: #9ACFDD; -fx-background-radius: 100;">
+                                       <children>
+                                          <Text fx:id="tot_bufalina" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="30.0">
+                                             <font>
+                                                <Font name="Lato Light" size="13.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="14.0" layoutY="304.0" prefHeight="260.0" prefWidth="236.0" style="-fx-background-color: #fff;">
+                                 <children>
+                                    <ImageView fitHeight="122.0" fitWidth="119.0" layoutX="59.0" layoutY="14.0">
+                                       <image>
+                                          <Image url="@../../img/pizze/capricciosa.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text layoutX="1.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Capricciosa" textAlignment="CENTER" wrappingWidth="235.7294921875">
+                                       <font>
+                                          <Font name="Lato Regular" size="22.0" />
+                                       </font>
+                                    </Text>
+                                    <Text layoutX="1.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text="€ 7.50" textAlignment="CENTER" wrappingWidth="235.7294921875">
+                                       <font>
+                                          <Font name="Lato Regular" size="16.0" />
+                                       </font>
+                                    </Text>
+                                    <Button fx:id="capricciosa" layoutX="79.0" layoutY="221.0" mnemonicParsing="false" onAction="#addPizza" style="-fx-background-color: #FFDE80;" text="Ordina ora" userData="capricciosa">
+                                       <font>
+                                          <Font name="Lato Light" size="13.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="r_capricciosa" layoutX="167.0" layoutY="222.0" mnemonicParsing="false" onAction="#removePizza" prefHeight="15.0" prefWidth="18.0" style="-fx-background-color: #D90B1C;" text="-" textFill="WHITE" userData="capricciosa">
+                                       <font>
+                                          <Font name="Lato Heavy" size="13.0" />
+                                       </font>
+                                    </Button>
+                                    <AnchorPane layoutX="10.0" layoutY="9.0" prefHeight="30.0" prefWidth="20.0" style="-fx-background-color: #9ACFDD; -fx-background-radius: 100;">
+                                       <children>
+                                          <Text fx:id="tot_capricciosa" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="30.0">
+                                             <font>
+                                                <Font name="Lato Light" size="13.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="271.0" layoutY="304.0" prefHeight="260.0" prefWidth="236.0" style="-fx-background-color: #fff;">
+                                 <children>
+                                    <ImageView fitHeight="122.0" fitWidth="119.0" layoutX="59.0" layoutY="14.0">
+                                       <image>
+                                          <Image url="@../../img/pizze/diavola.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text layoutX="1.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Diavola" textAlignment="CENTER" wrappingWidth="235.7294921875">
+                                       <font>
+                                          <Font name="Lato Regular" size="22.0" />
+                                       </font>
+                                    </Text>
+                                    <Text layoutX="1.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text="€ 6.50" textAlignment="CENTER" wrappingWidth="235.7294921875">
+                                       <font>
+                                          <Font name="Lato Regular" size="16.0" />
+                                       </font>
+                                    </Text>
+                                    <Button fx:id="diavola" layoutX="79.0" layoutY="221.0" mnemonicParsing="false" onAction="#addPizza" style="-fx-background-color: #FFDE80;" text="Ordina ora" userData="diavola">
+                                       <font>
+                                          <Font name="Lato Light" size="13.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="r_diavola" layoutX="167.0" layoutY="222.0" mnemonicParsing="false" onAction="#removePizza" prefHeight="15.0" prefWidth="18.0" style="-fx-background-color: #D90B1C;" text="-" textFill="WHITE" userData="diavola">
+                                       <font>
+                                          <Font name="Lato Heavy" size="13.0" />
+                                       </font>
+                                    </Button>
+                                    <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="30.0" prefWidth="20.0" style="-fx-background-color: #9ACFDD; -fx-background-radius: 100;">
+                                       <children>
+                                          <Text fx:id="tot_diavola" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="30.0">
+                                             <font>
+                                                <Font name="Lato Light" size="13.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="14.0" layoutY="594.0" prefHeight="260.0" prefWidth="236.0" style="-fx-background-color: #fff;">
+                                 <children>
+                                    <ImageView fitHeight="122.0" fitWidth="119.0" layoutX="59.0" layoutY="14.0">
+                                       <image>
+                                          <Image url="@../../img/pizze/napoli.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text layoutX="1.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Napoli" textAlignment="CENTER" wrappingWidth="235.7294921875">
+                                       <font>
+                                          <Font name="Lato Regular" size="22.0" />
+                                       </font>
+                                    </Text>
+                                    <Text layoutX="1.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text="€ 5.00" textAlignment="CENTER" wrappingWidth="235.7294921875">
+                                       <font>
+                                          <Font name="Lato Regular" size="16.0" />
+                                       </font>
+                                    </Text>
+                                    <Button fx:id="napoli" layoutX="79.0" layoutY="221.0" mnemonicParsing="false" onAction="#addPizza" style="-fx-background-color: #FFDE80;" text="Ordina ora" userData="napoli">
+                                       <font>
+                                          <Font name="Lato Light" size="13.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="r_napoli" layoutX="167.0" layoutY="222.0" mnemonicParsing="false" onAction="#removePizza" prefHeight="15.0" prefWidth="18.0" style="-fx-background-color: #D90B1C;" text="-" textFill="WHITE" userData="napoli">
+                                       <font>
+                                          <Font name="Lato Heavy" size="13.0" />
+                                       </font>
+                                    </Button>
+                                    <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="30.0" prefWidth="20.0" style="-fx-background-color: #9ACFDD; -fx-background-radius: 100;">
+                                       <children>
+                                          <Text fx:id="tot_napoli" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="30.0">
+                                             <font>
+                                                <Font name="Lato Light" size="13.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="271.0" layoutY="594.0" prefHeight="260.0" prefWidth="236.0" style="-fx-background-color: #fff;">
+                                 <children>
+                                    <ImageView fitHeight="122.0" fitWidth="119.0" layoutX="59.0" layoutY="14.0">
+                                       <image>
+                                          <Image url="@../../img/pizze/rucolina.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text layoutX="1.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rucolina" textAlignment="CENTER" wrappingWidth="235.7294921875">
+                                       <font>
+                                          <Font name="Lato Regular" size="22.0" />
+                                       </font>
+                                    </Text>
+                                    <Text layoutX="1.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text="€ 7.00" textAlignment="CENTER" wrappingWidth="235.7294921875">
+                                       <font>
+                                          <Font name="Lato Regular" size="16.0" />
+                                       </font>
+                                    </Text>
+                                    <Button fx:id="rucolina" layoutX="79.0" layoutY="221.0" mnemonicParsing="false" onAction="#addPizza" style="-fx-background-color: #FFDE80;" text="Ordina ora" userData="rucolina">
+                                       <font>
+                                          <Font name="Lato Light" size="13.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="r_rucolina" layoutX="167.0" layoutY="222.0" mnemonicParsing="false" onAction="#removePizza" prefHeight="15.0" prefWidth="18.0" style="-fx-background-color: #D90B1C;" text="-" textFill="WHITE" userData="rucolina">
+                                       <font>
+                                          <Font name="Lato Heavy" size="13.0" />
+                                       </font>
+                                    </Button>
+                                    <AnchorPane layoutX="9.0" layoutY="9.0" prefHeight="30.0" prefWidth="20.0" style="-fx-background-color: #9ACFDD; -fx-background-radius: 100;">
+                                       <children>
+                                          <Text fx:id="tot_rucolina" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="30.0">
+                                             <font>
+                                                <Font name="Lato Light" size="13.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="25.0" layoutY="828.0">
+               <children>
+                  <Button layoutX="509.0" layoutY="-180.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: #D9C6A3; -fx-background-radius: 100; -fx-border-style: none; -fx-border-radius: 100;" text="i" textFill="#333333" textOverrun="CLIP">
+                     <font>
+                        <Font name="Lato Regular" size="13.0" />
+                     </font>
+                  </Button>
+                  <Text fill="#f6f6f6" layoutY="-161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Developers:">
+                     <font>
+                        <Font name="Lato Regular" size="14.0" />
+                     </font>
+                  </Text>
+                  <Button layoutX="93.0" layoutY="-180.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: #f6f6f6; -fx-background-radius: 100; -fx-border-style: none; -fx-border-radius: 100;" text="CP" textFill="#333333" textOverrun="CLIP">
+                     <font>
+                        <Font name="Lato Regular" size="10.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="135.0" layoutY="-180.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: #f6f6f6; -fx-background-radius: 100; -fx-border-style: none; -fx-border-radius: 100;" text="GC" textFill="#333333" textOverrun="CLIP">
+                     <font>
+                        <Font name="Lato Regular" size="10.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
