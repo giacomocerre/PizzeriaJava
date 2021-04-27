@@ -18,3 +18,10 @@ Run the main file called:
 Main.java
 ```
 in the GUI package.
+
+## Viedo example
+
+https://user-images.githubusercontent.com/24272283/116219870-66dc5180-a74c-11eb-884a-04fa06af90ea.mp4
+
+
+
